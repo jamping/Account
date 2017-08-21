@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Account.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Account.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Account.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>bin/Account_d.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Account.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Account.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Account.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>bin/Account.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Account1.cpp" />
+    <ClCompile Include="AccountButton.cpp" />
+    <ClCompile Include="AccountDlg.cpp" />
+    <ClCompile Include="AccountInfoDlg.cpp" />
+    <ClCompile Include="AccountLogDlg.cpp" />
+    <ClCompile Include="AccountManageDlg.cpp" />
+    <ClCompile Include="AccountSelDlg.cpp" />
+    <ClCompile Include="ado.cpp" />
+    <ClCompile Include="DataBase.cpp" />
+    <ClCompile Include="DataManageDlg.cpp" />
+    <ClCompile Include="Des.cpp" />
+    <ClCompile Include="InOutDlg.cpp" />
+    <ClCompile Include="IntoAccountMoneyDlg.cpp" />
+    <ClCompile Include="MakeReportDlg.cpp" />
+    <ClCompile Include="MoneyDlg.cpp" />
+    <ClCompile Include="MoneyMoveDlg.cpp" />
+    <ClCompile Include="MoneyOper.cpp" />
+    <ClCompile Include="MyList.cpp" />
+    <ClCompile Include="Parameter.cpp" />
+    <ClCompile Include="Pay.cpp" />
+    <ClCompile Include="PayDlg.cpp" />
+    <ClCompile Include="ReportDlg.cpp" />
+    <ClCompile Include="SearchDlg.cpp" />
+    <ClCompile Include="SettingDlg.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserAccountDlg.cpp" />
+    <ClCompile Include="UserLoginDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Account.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="Account1.h" />
+    <ClInclude Include="AccountButton.h" />
+    <ClInclude Include="AccountDlg.h" />
+    <ClInclude Include="AccountInfoDlg.h" />
+    <ClInclude Include="AccountLogDlg.h" />
+    <ClInclude Include="AccountManageDlg.h" />
+    <ClInclude Include="AccountSelDlg.h" />
+    <ClInclude Include="ado.h" />
+    <ClInclude Include="DataBase.h" />
+    <ClInclude Include="DataManageDlg.h" />
+    <ClInclude Include="Des.h" />
+    <ClInclude Include="InOutDlg.h" />
+    <ClInclude Include="IntoAccountMoneyDlg.h" />
+    <ClInclude Include="MakeReportDlg.h" />
+    <ClInclude Include="MoneyDlg.h" />
+    <ClInclude Include="MoneyMoveDlg.h" />
+    <ClInclude Include="MoneyOper.h" />
+    <ClInclude Include="MyList.h" />
+    <ClInclude Include="Parameter.h" />
+    <ClInclude Include="Pay.h" />
+    <ClInclude Include="PayDlg.h" />
+    <ClInclude Include="ReportDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SearchDlg.h" />
+    <ClInclude Include="SettingDlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="UserAccountDlg.h" />
+    <ClInclude Include="UserLoginDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\Account.ico" />
+    <CustomBuild Include="res\Account.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\Arrow.bmp" />
+    <CustomBuild Include="res\ArrowLeft.bmp" />
+    <CustomBuild Include="res\ArrowRight.bmp" />
+    <CustomBuild Include="res\bitmap1.bmp" />
+    <CustomBuild Include="res\bitmap10.bmp" />
+    <CustomBuild Include="res\bitmap11.bmp" />
+    <CustomBuild Include="res\bitmap12.bmp" />
+    <CustomBuild Include="res\bitmap13.bmp" />
+    <CustomBuild Include="res\bitmap14.bmp" />
+    <CustomBuild Include="res\bitmap15.bmp" />
+    <CustomBuild Include="res\bitmap16.bmp" />
+    <CustomBuild Include="res\bitmap17.bmp" />
+    <CustomBuild Include="res\bitmap2.bmp" />
+    <CustomBuild Include="res\bitmap3.bmp" />
+    <CustomBuild Include="res\bitmap4.bmp" />
+    <CustomBuild Include="res\bitmap5.bmp" />
+    <CustomBuild Include="res\bitmap8.bmp" />
+    <CustomBuild Include="res\bitmap9.bmp" />
+    <CustomBuild Include="res\blue_edi.bmp" />
+    <CustomBuild Include="res\BlueDelete.ico" />
+    <CustomBuild Include="res\BlueEdit.ico" />
+    <CustomBuild Include="res\BlueNew.ico" />
+    <CustomBuild Include="res\bmp00001.bmp" />
+    <CustomBuild Include="res\bmp00002.bmp" />
+    <CustomBuild Include="res\CompanyAccount.bmp" />
+    <CustomBuild Include="res\CompanyAccount2.bmp" />
+    <CustomBuild Include="res\CompanyAccount3.bmp" />
+    <CustomBuild Include="res\delete.bmp" />
+    <CustomBuild Include="res\delete1.bmp" />
+    <CustomBuild Include="res\EditDraw.bmp" />
+    <CustomBuild Include="res\EditGet.bmp" />
+    <CustomBuild Include="res\EditGet2.bmp" />
+    <CustomBuild Include="res\EditPay.bmp" />
+    <CustomBuild Include="res\EditPay2.bmp" />
+    <CustomBuild Include="res\EmptyAccount.bmp" />
+    <CustomBuild Include="res\excel.bmp" />
+    <CustomBuild Include="res\find.bmp" />
+    <CustomBuild Include="res\help.bmp" />
+    <CustomBuild Include="res\Input.ico" />
+    <CustomBuild Include="res\Instruction.ico" />
+    <CustomBuild Include="res\lock.bmp" />
+    <CustomBuild Include="res\money_in.bmp" />
+    <CustomBuild Include="res\money_ou.bmp" />
+    <CustomBuild Include="res\MoneyPay.ico" />
+    <CustomBuild Include="res\NewDraw.bmp" />
+    <CustomBuild Include="res\NewGet.bmp" />
+    <CustomBuild Include="res\NewGet2.bmp" />
+    <CustomBuild Include="res\NewPay.bmp" />
+    <CustomBuild Include="res\NewPay2.bmp" />
+    <CustomBuild Include="res\No.bmp" />
+    <CustomBuild Include="res\ok.bmp" />
+    <CustomBuild Include="res\Print2.ico" />
+    <CustomBuild Include="res\Question.bmp" />
+    <CustomBuild Include="res\red_del.bmp" />
+    <CustomBuild Include="res\red_edit.bmp" />
+    <CustomBuild Include="res\RedEdit.ico" />
+    <CustomBuild Include="res\Report.ico" />
+    <CustomBuild Include="res\SetFields.ico" />
+    <CustomBuild Include="res\SuperMoney.ico" />
+    <CustomBuild Include="res\twoside.bmp" />
+    <CustomBuild Include="res\TwoSide.ico" />
+    <CustomBuild Include="res\Yellow+.ico" />
+    <CustomBuild Include="res\Yes.bmp" />
+    <CustomBuild Include="res\Yes.ico" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

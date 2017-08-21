@@ -1,0 +1,743 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Account.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SuperMoney.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于流水账"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "流水账 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "海洋 版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_ACCOUNT_DIALOG DIALOGEX 0, 0, 532, 367
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "流水账"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "账簿范围",IDC_STATIC,25,8,39,8
+    PUSHBUTTON      "Button1",IDC_ACCOUNT_SCOPE,12,21,60,38
+    LTEXT           "",IDC_STATIC,77,7,1,353,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "当前日期",IDC_STATIC,24,69,33,8
+    CONTROL         "DateTimePicker1",IDC_SEL_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,11,84,63,15
+    LTEXT           "录入操作",IDC_STATIC,24,130,33,8
+    PUSHBUTTON      "收入",IDC_INCOME,12,150,60,17,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "支出",IDC_OUTCOME,12,178,60,17
+    PUSHBUTTON      "平调",IDC_BANLANCE,12,206,60,17
+    LTEXT           "当前用户",IDC_STATIC,23,241,33,8
+    LTEXT           "Static",IDC_CUR_USER,25,257,26,15
+    PUSHBUTTON      "备份数据",IDC_BACKUP,12,279,60,40
+    CONTROL         "",IDC_TAB,"Static",SS_GRAYRECT | NOT WS_VISIBLE,82,7,
+                    443,353
+    PUSHBUTTON      "<<<",IDC_PREV_DATE,10,105,30,14
+    PUSHBUTTON      ">>>",IDC_NEXT_DATE,44,105,30,14
+END
+
+IDD_LOGIN DIALOG DISCARDABLE  0, 0, 358, 250
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_PASSWORD,116,125,89,14,ES_PASSWORD | ES_AUTOHSCROLL
+    COMBOBOX        IDC_USERNAME,116,96,89,74,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "登陆",IDC_LOGIN,236,101,50,28
+    LTEXT           "用户名",IDC_STATIC,79,95,25,8
+    LTEXT           "密码",IDC_STATIC,79,125,17,8
+END
+
+IDD_USER_ACCOUNT DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    LTEXT           "总金额：",IDC_TOTAL_MONEY,29,222,92,8
+    PUSHBUTTON      "上一页",IDC_PREV_PAGE,135,213,50,25
+    PUSHBUTTON      "新增账户",IDC_ADD_USER,204,213,50,25
+    PUSHBUTTON      "下一页",IDC_NEXT_PAGE,273,213,50,25
+END
+
+IDD_ACCOUNT_LOG DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,31,344,211
+    LTEXT           "上日结余",IDC_LASTDAY_LEFT,11,3,95,8
+    LTEXT           "本日结余",IDC_TODAY_LEFT,11,17,97,8
+    LTEXT           "本日支出",IDC_TODAY_OUTCOME,111,17,116,8
+    LTEXT           "本日收入",IDC_TODAY_INCOME,111,3,117,8
+    PUSHBUTTON      "修改",IDC_EDIT,241,6,38,20
+    PUSHBUTTON      "删除",IDC_DEL,283,6,38,20
+END
+
+IDD_INANDOUT DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "新增记录",IDC_ADDIN,7,44,50,14
+    PUSHBUTTON      "修改记录",IDC_MODIFYIN,7,65,50,14
+    PUSHBUTTON      "删除记录",IDC_DELIN,7,86,50,14
+    PUSHBUTTON      "查找应收",IDC_SEARCHIN,7,22,50,14
+    CONTROL         "List1",IDC_LIST_IN,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,58,22,293,105
+    PUSHBUTTON      "查找应付",IDC_SEARCHOUT,7,144,50,14
+    PUSHBUTTON      "新增记录",IDC_ADDOUT,7,166,50,14
+    PUSHBUTTON      "修改记录",IDC_MODIFYOUT,7,188,50,14
+    PUSHBUTTON      "删除记录",IDC_DELOUT,7,210,50,14
+    CONTROL         "List1",IDC_LIST_OUT,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,58,144,293,98
+    LTEXT           "应收记录列表",IDC_STATIC,58,10,49,8
+    LTEXT           "应付记录列表",IDC_STATIC,61,132,49,8
+END
+
+IDD_REPORT DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "生成报表",IDC_MAKE_REPORT,8,6,52,26
+    PUSHBUTTON      "导出Excel",IDC_MAKE_EXCEL,67,6,52,26
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,37,344,205
+    PUSHBUTTON      "删除记录",IDC_DEL,186,6,52,26
+    PUSHBUTTON      "修改记录",IDC_EDIT,126,6,52,26
+END
+
+IDD_SETTING DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "用户密码管理",IDC_STATIC,7,7,136,56
+    COMBOBOX        IDC_COMBO_USERS,17,20,76,63,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_USER_PASSWORD,17,40,76,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "修改",IDC_MODIFY,98,41,40,14
+    LTEXT           "客户名称列表",IDC_CUSTOMER_LIST,7,72,133,64
+    LTEXT           "业务员列表",IDC_OWNER_LIST,155,71,133,64
+    LTEXT           "收支种类",IDC_INCOME_TYPE,7,155,94,64
+    LTEXT           "款项类别",IDC_PAY_TYPE,121,155,94,64
+    LTEXT           "款项凭证",IDC_PAY_ITEM_TYPE,234,155,94,64
+END
+
+IDD_DATA_MANAGE DIALOG DISCARDABLE  0, 0, 358, 249
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "账套数据操作",IDC_STATIC,88,54,170,97
+    PUSHBUTTON      "备份",IDC_BACKUP,117,90,50,31
+    PUSHBUTTON      "恢复",IDC_RESTORE,185,90,50,31
+END
+
+IDD_ACCOUNT_MANAGE DIALOG DISCARDABLE  0, 0, 179, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "账户"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,77,101,39,14
+    PUSHBUTTON      "取消",IDCANCEL,123,101,36,14
+    CONTROL         "银行账户",IDC_RADIO_BANK,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,36,28,48,10
+    CONTROL         "现金账户",IDC_RADIO_MONEY,"Button",BS_AUTORADIOBUTTON,
+                    99,28,48,10
+    GROUPBOX        "账户类型",IDC_STATIC,12,10,160,40
+    LTEXT           "账户名称",IDC_STATIC,13,62,33,8
+    LTEXT           "起始金额",IDC_STATIC,13,80,33,8
+    EDITTEXT        IDC_ACCOUNT_NAME,56,60,115,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MONEY_BASE,56,77,115,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "删除",IDC_DEL,30,101,39,14
+END
+
+IDD_ACCOUNT_SEL DIALOG DISCARDABLE  0, 0, 187, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "账户选择"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "Button1",IDC_BUTTON_ACCOUNT,66,7,50,31
+    PUSHBUTTON      "Button1",IDC_BUTTON_ACCOUNT3,113,59,50,31
+    PUSHBUTTON      "Button1",IDC_BUTTON_ACCOUNT2,20,59,50,31
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,138,21,1,38
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,45,21,1,38
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,115,21,23,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,45,21,22,1
+END
+
+IDD_ACCOUNT DIALOGEX 0, 0, 226, 154
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "账户"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "修改账户",IDC_MODIFY_ACCOUNT,95,106,43,33
+    PUSHBUTTON      "取消操作",IDCANCEL,156,106,43,33
+    DEFPUSHBUTTON   "当月记录",IDC_MONTH,27,106,43,33
+    PUSHBUTTON      "收入",IDC_INCOME,30,69,42,14
+    PUSHBUTTON      "支出",IDC_OUTCOME,95,69,42,14
+    PUSHBUTTON      "平调",IDC_BALANCE,156,69,42,14
+    LTEXT           "账户名称：",IDC_ACCOUNT_NAME,67,16,152,8
+    LTEXT           "账户余额：",IDC_ACCOUNT_LEFT,67,34,152,8
+    CONTROL         165,IDC_STATIC,"Static",SS_BITMAP,34,20,16,16,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_MONEY DIALOG DISCARDABLE  0, 0, 322, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "收入支出"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,151,159,42,15
+    PUSHBUTTON      "取消",IDCANCEL,211,159,42,15
+    CONTROL         "",IDC_TYPE,"Static",SS_BITMAP,42,12,11,11
+    LTEXT           "单据编号",IDC_STATIC,12,49,33,8
+    EDITTEXT        IDC_NUMBER,12,63,50,14,ES_AUTOHSCROLL
+    LTEXT           "账户名称",IDC_STATIC,72,49,33,8
+    COMBOBOX        IDC_ACCOUNT_NAME,71,64,115,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "客户名称",IDC_STATIC,199,49,33,8
+    COMBOBOX        IDC_CUSTOMER_NAME,199,64,71,66,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "保存客户",IDC_SAVE,274,63,38,14
+    LTEXT           "录入时间",IDC_STATIC,12,84,33,8
+    CONTROL         "DateTimePicker1",IDC_INPUT_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,12,98,51,15
+    LTEXT           "金额",IDC_STATIC,73,84,17,8
+    EDITTEXT        IDC_MONEY,71,98,78,14,ES_AUTOHSCROLL
+    LTEXT           "收支种类",IDC_STATIC,166,84,33,8
+    COMBOBOX        IDC_INCOME_TYPE,159,98,72,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "业务员",IDC_STATIC,237,84,25,8
+    COMBOBOX        IDC_OWNER,236,98,76,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "款项类别",IDC_STATIC,12,119,33,8
+    COMBOBOX        IDC_PAY_TYPE,12,134,80,67,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "凭证",IDC_STATIC,100,119,17,8
+    COMBOBOX        IDC_PAY_ITEM_TYPE,100,134,80,78,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "备注",IDC_STATIC,188,119,17,8
+    EDITTEXT        IDC_REMARK,188,134,123,14,ES_AUTOHSCROLL
+END
+
+IDD_MONEY_MOVE DIALOG DISCARDABLE  0, 0, 257, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "财务平调"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,100,120,38,14
+    PUSHBUTTON      "取消",IDCANCEL,146,120,38,14
+    CONTROL         191,IDC_STATIC,"Static",SS_BITMAP,27,7,210,30
+    LTEXT           "由",IDC_STATIC,21,52,9,8
+    COMBOBOX        IDC_ACCOUNT1,42,50,81,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "调出至",IDC_STATIC,134,52,25,8
+    COMBOBOX        IDC_ACCOUNT2,168,50,80,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "金额",IDC_STATIC,20,76,17,8
+    EDITTEXT        IDC_MONEY,42,74,82,14,ES_AUTOHSCROLL
+    LTEXT           "时间",IDC_STATIC,138,76,17,8
+    CONTROL         "DateTimePicker1",IDC_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,168,73,79,15
+    LTEXT           "备注",IDC_STATIC,20,101,17,8
+    EDITTEXT        IDC_REMARK,42,99,208,14,ES_AUTOHSCROLL
+END
+
+IDD_PAY DIALOG DISCARDABLE  0, 0, 242, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "应收应付"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,49,151,42,19
+    PUSHBUTTON      "取消",IDCANCEL,165,151,42,19
+    CONTROL         192,IDC_PIC,"Static",SS_BITMAP,15,8,210,30
+    LTEXT           "录入时间",IDC_STATIC,18,45,33,8
+    CONTROL         "DateTimePicker1",IDC_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,18,59,63,15
+    LTEXT           "客户名称",IDC_STATIC,106,45,33,8
+    COMBOBOX        IDC_CUSTOMER,109,59,77,70,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "应收金额",IDC_STATIC_GETPAY,19,80,33,8
+    LTEXT           "已收金额",IDC_STATIC_GETTED_PAY,92,80,33,8
+    LTEXT           "尚欠金额",IDC_STATIC,164,80,33,8
+    EDITTEXT        IDC_GET_MONEY,19,94,66,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GETTED_MONEY,92,94,66,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LEFT_MONEY,165,94,66,14,ES_AUTOHSCROLL
+    LTEXT           "备注信息",IDC_STATIC,18,113,33,8
+    EDITTEXT        IDC_REMARK,19,126,210,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "保存客户",IDC_SAVE_CUSTOMER,192,58,35,14
+    PUSHBUTTON      "应收入账",IDC_GETPAY_INTO_ACCOUNT,100,151,53,19
+END
+
+IDD_INTO_ACCOUNT DIALOG DISCARDABLE  0, 0, 205, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "入账金额"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,47,117,51,19
+    PUSHBUTTON      "取消",IDCANCEL,120,117,51,19
+    LTEXT           "请输入要入账的金额",IDC_STATIC,66,60,84,8
+    EDITTEXT        IDC_MONEY,54,83,101,14,ES_AUTOHSCROLL
+    CONTROL         206,IDC_STATIC,"Static",SS_BITMAP,82,9,40,40
+END
+
+IDD_SEARCH DIALOG DISCARDABLE  0, 0, 177, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "应收应付记录查找"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,47,99,40,14
+    PUSHBUTTON      "取消",IDCANCEL,99,99,38,14
+    CONTROL         "DateTimePicker1",IDC_TIME1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,18,25,56,15
+    CONTROL         "DateTimePicker2",IDC_TIME2,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,87,25,56,15
+    LTEXT           "客户名称",IDC_STATIC,16,49,33,8
+    COMBOBOX        IDC_CUSTOMER,63,47,81,84,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "备注信息",IDC_STATIC,16,67,33,8
+    EDITTEXT        IDC_REMARK,18,80,152,14,ES_AUTOHSCROLL
+    CONTROL         "时间范围",IDC_CHECK_TIME,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,17,10,48,10
+END
+
+IDD_MAKE_REPORT DIALOG DISCARDABLE  0, 0, 352, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "报表"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,291,96,46,14
+    PUSHBUTTON      "取消",IDCANCEL,291,113,46,14
+    LTEXT           "单据类型",IDC_STATIC,13,3,33,8
+    COMBOBOX        IDC_COMBO_TYPE,16,15,64,65,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "单据编号",IDC_STATIC,13,31,33,8
+    EDITTEXT        IDC_NUMBER,16,43,64,14,ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_TIME1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,102,15,62,15
+    CONTROL         "DateTimePicker1",IDC_TIME2,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,103,43,62,15
+    EDITTEXT        IDC_MONEY1,197,15,62,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MONEY2,197,43,62,14,ES_AUTOHSCROLL
+    CONTROL         "时间范围",IDC_CHECK_TIME,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,103,3,48,10
+    CONTROL         "金额范围",IDC_CHECK_MONEY,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,197,3,48,10
+    LTEXT           "客户名称",IDC_STATIC,13,64,33,8
+    COMBOBOX        IDC_COMBO_CUSTOMER,18,79,64,70,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "收支种类",IDC_STATIC,103,65,33,8
+    COMBOBOX        IDC_COMBO_INCOME_TYPE,103,79,62,79,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "款项类别",IDC_STATIC,197,66,33,8
+    COMBOBOX        IDC_COMBO_PAY_TYPE,197,79,62,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "凭证",IDC_STATIC,13,98,17,8
+    COMBOBOX        IDC_COMBO_PAY_ITEM_TYPE,18,112,64,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "业务员",IDC_STATIC,103,98,25,8
+    COMBOBOX        IDC_COMBO_OWNER,103,112,62,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "备注",IDC_STATIC,197,98,17,8
+    EDITTEXT        IDC_REMARK,197,112,62,14,ES_AUTOHSCROLL
+    LTEXT           "账户名称",IDC_STATIC,274,3,33,8
+    LISTBOX         IDC_LIST_ACCOUNT,273,15,72,77,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP,85,26,13,18
+    CONTROL         209,IDC_STATIC,"Static",SS_BITMAP,180,26,13,18
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "海军政治部办公室信息网络中心\0"
+            VALUE "FileDescription", "Account Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "流水账\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "流水账.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "流水账 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ACCOUNT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 525
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 360
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_USER_ACCOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_ACCOUNT_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_INANDOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_DATA_MANAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_ACCOUNT_MANAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ACCOUNT_SEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_ACCOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_MONEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_MONEY_MOVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_PAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_INTO_ACCOUNT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_MAKE_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        BOTTOMMARGIN, 127
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TAB                 BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_COMPANY_ACCOUNT     BITMAP  DISCARDABLE     "res\\CompanyAccount.bmp"
+IDB_COMPANY_ACCOUNT2    BITMAP  DISCARDABLE     "res\\CompanyAccount2.bmp"
+IDB_COMPANY_ACCOUNT3    BITMAP  DISCARDABLE     "res\\CompanyAccount3.bmp"
+IDB_MONEY_IN            BITMAP  DISCARDABLE     "res\\money_in.bmp"
+IDB_MONEY_OUT           BITMAP  DISCARDABLE     "res\\money_ou.bmp"
+IDB_MONEY_DRAW          BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
+IDB_BACKUP              BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_BLUE_NEW            BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
+IDB_BLUE_DEL            BITMAP  DISCARDABLE     "res\\bitmap5.bmp"
+IDB_BLUE_EDIT           BITMAP  DISCARDABLE     "res\\blue_edi.bmp"
+IDB_FIND                BITMAP  DISCARDABLE     "res\\find.bmp"
+IDB_RED_NEW             BITMAP  DISCARDABLE     "res\\bitmap8.bmp"
+IDB_PRINT               BITMAP  DISCARDABLE     "res\\bitmap9.bmp"
+IDB_RED_DEL             BITMAP  DISCARDABLE     "res\\red_del.bmp"
+IDB_RED_EDIT            BITMAP  DISCARDABLE     "res\\red_edit.bmp"
+IDB_BANK                BITMAP  DISCARDABLE     "res\\bitmap10.bmp"
+IDB_HOME                BITMAP  DISCARDABLE     "res\\bitmap11.bmp"
+IDB_LOAD                BITMAP  DISCARDABLE     "res\\bitmap12.bmp"
+IDB_MAKEREPORT          BITMAP  DISCARDABLE     "res\\bitmap13.bmp"
+IDB_LOCK                BITMAP  DISCARDABLE     "res\\lock.bmp"
+IDB_DELETE              BITMAP  DISCARDABLE     "res\\delete.bmp"
+IDB_EXCEL               BITMAP  DISCARDABLE     "res\\excel.bmp"
+IDB_EDIT                BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_CANCEL              BITMAP  DISCARDABLE     "res\\bitmap14.bmp"
+IDB_KEY                 BITMAP  DISCARDABLE     "res\\bitmap15.bmp"
+IDB_ACCOUNT             BITMAP  DISCARDABLE     "res\\bitmap17.bmp"
+IDB_NO                  BITMAP  DISCARDABLE     "res\\No.bmp"
+IDB_DELETE1             BITMAP  DISCARDABLE     "res\\delete1.bmp"
+IDB_PREV                BITMAP  DISCARDABLE     "res\\ArrowLeft.bmp"
+IDB_NEXT                BITMAP  DISCARDABLE     "res\\ArrowRight.bmp"
+IDB_EMPTY_ACCOUNT       BITMAP  DISCARDABLE     "res\\EmptyAccount.bmp"
+IDB_EDIT_DRAW           BITMAP  DISCARDABLE     "res\\EditDraw.bmp"
+IDB_EDIT_GET2           BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_EDIT_PAY2           BITMAP  DISCARDABLE     "res\\EditPay2.bmp"
+IDB_EDIT_PAY            BITMAP  DISCARDABLE     "res\\EditPay.bmp"
+IDB_NEW_DRAW            BITMAP  DISCARDABLE     "res\\NewDraw.bmp"
+IDB_NEW_GET2            BITMAP  DISCARDABLE     "res\\NewGet2.bmp"
+IDB_NEW_GET             BITMAP  DISCARDABLE     "res\\NewGet.bmp"
+IDB_NEW_PAY2            BITMAP  DISCARDABLE     "res\\NewPay2.bmp"
+IDB_NEW_PAY             BITMAP  DISCARDABLE     "res\\NewPay.bmp"
+IDB_EDIT_GET            BITMAP  DISCARDABLE     "res\\EditGet.bmp"
+IDB_TWOSIDE             BITMAP  DISCARDABLE     "res\\twoside.bmp"
+IDB_OK                  BITMAP  DISCARDABLE     "res\\ok.bmp"
+IDB_HELP                BITMAP  DISCARDABLE     "res\\Question.bmp"
+IDB_ARROW               BITMAP  DISCARDABLE     "res\\Arrow.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LOGIN DLGINIT
+BEGIN
+    IDC_USERNAME, 0x403, 7, 0
+0xdcb9, 0xedc0, 0xb1d4, "\000" 
+    IDC_USERNAME, 0x403, 5, 0
+0xf6b3, 0xc9c4, "\000" 
+    0
+END
+
+IDD_SETTING DLGINIT
+BEGIN
+    IDC_COMBO_USERS, 0x403, 7, 0
+0xdcb9, 0xedc0, 0xb1d4, "\000" 
+    IDC_COMBO_USERS, 0x403, 5, 0
+0xf6b3, 0xc9c4, "\000" 
+    0
+END
+
+IDD_MAKE_REPORT DLGINIT
+BEGIN
+    IDC_COMBO_TYPE, 0x403, 5, 0
+0xf9cb, 0xd0d3, "\000" 
+    IDC_COMBO_TYPE, 0x403, 5, 0
+0xd5ca, 0xebc8, "\000" 
+    IDC_COMBO_TYPE, 0x403, 5, 0
+0xa7d6, 0xf6b3, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 流水账(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Account.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

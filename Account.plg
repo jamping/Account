@@ -1,0 +1,129 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Account - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/Account.res" /d "NDEBUG" /d "_AFXDLL" "D:\vc\Account\Account.rc"" 
+Creating temporary file "C:\Users\JJP\AppData\Local\Temp\RSPA137.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Release/Account.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\vc\Account\Account.cpp"
+"D:\vc\Account\Account1.cpp"
+"D:\vc\Account\AccountButton.cpp"
+"D:\vc\Account\AccountDlg.cpp"
+"D:\vc\Account\AccountInfoDlg.cpp"
+"D:\vc\Account\AccountLogDlg.cpp"
+"D:\vc\Account\AccountManageDlg.cpp"
+"D:\vc\Account\AccountSelDlg.cpp"
+"D:\vc\Account\ado.cpp"
+"D:\vc\Account\DataBase.cpp"
+"D:\vc\Account\DataManageDlg.cpp"
+"D:\vc\Account\Des.cpp"
+"D:\vc\Account\InOutDlg.cpp"
+"D:\vc\Account\IntoAccountMoneyDlg.cpp"
+"D:\vc\Account\MakeReportDlg.cpp"
+"D:\vc\Account\MoneyDlg.cpp"
+"D:\vc\Account\MoneyMoveDlg.cpp"
+"D:\vc\Account\MoneyOper.cpp"
+"D:\vc\Account\MyList.cpp"
+"D:\vc\Account\Parameter.cpp"
+"D:\vc\Account\Pay.cpp"
+"D:\vc\Account\PayDlg.cpp"
+"D:\vc\Account\ReportDlg.cpp"
+"D:\vc\Account\SearchDlg.cpp"
+"D:\vc\Account\SettingDlg.cpp"
+"D:\vc\Account\User.cpp"
+"D:\vc\Account\UserAccountDlg.cpp"
+"D:\vc\Account\UserLoginDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\JJP\AppData\Local\Temp\RSPA137.tmp" 
+Creating temporary file "C:\Users\JJP\AppData\Local\Temp\RSPA138.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Release/Account.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\vc\Account\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\JJP\AppData\Local\Temp\RSPA138.tmp" 
+Creating temporary file "C:\Users\JJP\AppData\Local\Temp\RSPA139.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/Account.pdb" /machine:I386 /out:"bin/Account.exe" 
+.\Release\Account.obj
+.\Release\Account1.obj
+.\Release\AccountButton.obj
+.\Release\AccountDlg.obj
+.\Release\AccountInfoDlg.obj
+.\Release\AccountLogDlg.obj
+.\Release\AccountManageDlg.obj
+.\Release\AccountSelDlg.obj
+.\Release\ado.obj
+.\Release\DataBase.obj
+.\Release\DataManageDlg.obj
+.\Release\Des.obj
+.\Release\InOutDlg.obj
+.\Release\IntoAccountMoneyDlg.obj
+.\Release\MakeReportDlg.obj
+.\Release\MoneyDlg.obj
+.\Release\MoneyMoveDlg.obj
+.\Release\MoneyOper.obj
+.\Release\MyList.obj
+.\Release\Parameter.obj
+.\Release\Pay.obj
+.\Release\PayDlg.obj
+.\Release\ReportDlg.obj
+.\Release\SearchDlg.obj
+.\Release\SettingDlg.obj
+.\Release\StdAfx.obj
+.\Release\User.obj
+.\Release\UserAccountDlg.obj
+.\Release\UserLoginDlg.obj
+.\Release\Account.res
+]
+Creating command line "link.exe @C:\Users\JJP\AppData\Local\Temp\RSPA139.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with BCGCBPRO100.lib
+Compiling...
+Account.cpp
+Account1.cpp
+AccountButton.cpp
+AccountDlg.cpp
+AccountInfoDlg.cpp
+AccountLogDlg.cpp
+AccountManageDlg.cpp
+AccountSelDlg.cpp
+ado.cpp
+DataBase.cpp
+DataManageDlg.cpp
+Des.cpp
+InOutDlg.cpp
+IntoAccountMoneyDlg.cpp
+MakeReportDlg.cpp
+MoneyDlg.cpp
+MoneyMoveDlg.cpp
+MoneyOper.cpp
+MyList.cpp
+Parameter.cpp
+Generating Code...
+Compiling...
+Pay.cpp
+PayDlg.cpp
+ReportDlg.cpp
+SearchDlg.cpp
+SettingDlg.cpp
+User.cpp
+UserAccountDlg.cpp
+UserLoginDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Account.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
